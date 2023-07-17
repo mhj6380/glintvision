@@ -32,8 +32,14 @@ function FeaturesSectionOne() {
           <Grid item xs={12} lg={6}>
             <Stack>
               <img
-                style={{ width: "100%", height: "100%" }}
-                src="https://cdn.pixabay.com/photo/2017/08/02/21/01/macbook-2573421_1280.jpg"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  borderRadius: 10,
+                  boxShadow: "0 0 10px rgba(0,0,0,0.2)",
+                }}
+                src="https://cdn.pixabay.com/photo/2014/10/15/22/17/apple-490485_1280.jpg"
                 alt=""
               />
             </Stack>
@@ -47,9 +53,11 @@ function FeaturesSectionOne() {
               mb={2}
               style={{ color: "black", fontWeight: 400, fontSize: "16px", letterSpacing: 1 }}
             >
-              어떤 내용을 입력하면 좋을지 정해주세요 어떤 내용을 입력하면 좋을지 정해주세요 어떤
-              내용을 입력하면 좋을지 정해주세요 어떤 내용을 입력하면 좋을지 정해주세요 어떤 내용을
-              입력하면 좋을지 정해주세요
+              전문적인 휴대폰 생산 및 동남아시아와 아프리카 지역으로의 효율적인 유통을 담당하고
+              있습니다. 최고 품질의 제품을 생산하며, 글로벌 네트워크를 통해 안정적이고 신속한 배송을
+              보장합니다. 우리의 목표는 신뢰성 있는 제품과 우수한 서비스를 통해 고객의 만족을
+              최우선으로 채우는 것입니다. 동남아시아와 아프리카에서 우리와 함께 성장하고
+              협력해보세요.
             </MKTypography>
             <MKTypography
               component="a"

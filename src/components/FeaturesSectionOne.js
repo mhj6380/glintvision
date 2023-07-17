@@ -37,9 +37,10 @@ function FeaturesSectionOne() {
               mb={2}
               style={{ color: "black", fontWeight: 400, fontSize: "16px", letterSpacing: 1 }}
             >
-              어떤 내용을 입력하면 좋을지 정해주세요 어떤 내용을 입력하면 좋을지 정해주세요 어떤
-              내용을 입력하면 좋을지 정해주세요 어떤 내용을 입력하면 좋을지 정해주세요 어떤 내용을
-              입력하면 좋을지 정해주세요
+              글린트비전은 혁신적인 IT기술을 통해 창조적인 가치를 제공하고 있습니다. 우리의 플랫폼은
+              다양한 개발자와 파트너를 유치하여 독특한 생태계를 형성하며, 네트워크 효과와 경제적
+              이점을 제공합니다. 우리의 목표는 고객들에게 혁신적인 솔루션과 뛰어난 사용자 경험을
+              제공하는 동시에, 파트너들과의 협력을 통해 시너지를 창출하는 것입니다.
             </MKTypography>
             <MKTypography
               component="a"
@@ -73,8 +74,14 @@ function FeaturesSectionOne() {
           <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
             <Stack>
               <img
-                style={{ width: "100%", height: "100%" }}
-                src="https://cdn.pixabay.com/photo/2017/08/02/21/01/macbook-2573421_1280.jpg"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  borderRadius: 10,
+                  boxShadow: "0 0 10px rgba(0,0,0,0.2)",
+                }}
+                src="https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_1280.jpg"
                 alt=""
               />
             </Stack>

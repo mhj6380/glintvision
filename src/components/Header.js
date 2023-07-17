@@ -6,40 +6,191 @@ import { motion } from "framer-motion";
 import LanguageIcon from "@mui/icons-material/Language";
 import styled from "styled-components";
 import "global.scss";
-const logoWhite = "https://cdn.pixabay.com/photo/2017/08/02/21/01/macbook-2573421_1280.jpg";
-const logoBlack = "https://cdn.pixabay.com/photo/2017/08/02/21/01/macbook-2573421_1280.jpg";
+import "glint.scss";
+import LogoWhite from "assets/logo.png";
+import LogoBlack from "assets/logo.png";
 const navItems = [
-  // {
-  //   id: 0,
-  //   title: "서비스",
-  //   href: "/services",
-  // },
-  // {
-  //   id: 1,
-  //   title: "회사소개",
-  //   href: "/services",
-  // },
-  // {
-  //   id: 2,
-  //   title: "포트폴리오",
-  //   href: "/portfolio",
-  // },
+  {
+    id: 0,
+    title: "Company",
+    href: "/ci",
+    // children: [
+    //   {
+    //     id: 1,
+    //     title: "Chairman & CEO",
+    //     href: "/ci#sec1",
+    //   },
+    //   {
+    //     id: 1,
+    //     title: "Introduction",
+    //     href: "/ci#sec2",
+    //   },
+    //   {
+    //     id: 1,
+    //     title: "Vision & Goal",
+    //     href: "/ci#sec3",
+    //   },
+    //   {
+    //     id: 1,
+    //     title: "CI",
+    //     href: "/ci#sec4",
+    //   },
+    //   {
+    //     id: 1,
+    //     title: "Documents",
+    //     href: "/ci#sec5",
+    //   },
+    //   {
+    //     id: 1,
+    //     title: "Organization",
+    //     href: "/ci#sec6",
+    //   },
+    // ],
+  },
   {
     id: 1,
-    title: "휴대폰 사업",
-    href: "/detail/phone",
+    title: "GV Platform",
+    href: "/detail/platform",
+    // children: [
+    //   {
+    //     id: 1,
+    //     title: "Service",
+    //     href: "/detail/platform#sec1",
+    //   },
+    //   {
+    //     id: 1,
+    //     title: "Ecosystem",
+    //     href: "/detail/platform#sec2",
+    //   },
+    // ],
   },
   {
     id: 2,
-    title: "마케팅 사업",
+    title: "Marketing",
     href: "/detail/marketing",
+    // children: [
+    //   {
+    //     id: 1,
+    //     title: "Process",
+    //     href: "/detail/marketing#sec1",
+    //   },
+    //   {
+    //     id: 1,
+    //     title: "On-line",
+    //     href: "/detail/marketing#sec2",
+    //   },
+    //   {
+    //     id: 1,
+    //     title: "Off-line",
+    //     href: "/detail/marketing#sec3",
+    //   },
+    //   {
+    //     id: 1,
+    //     title: "IP & Brand",
+    //     href: "/detail/marketing#sec4",
+    //   },
+    // ],
   },
   {
     id: 3,
-    title: "IT 사업",
+    title: "IT",
     href: "/detail/it",
+    // children: [
+    //   {
+    //     id: 1,
+    //     title: "Global Messenger",
+    //     href: "/detail/it#sec1",
+    //   },
+    //   {
+    //     id: 2,
+    //     title: "Random Chatting",
+    //     href: "/detail/it#sec2",
+    //   },
+    //   {
+    //     id: 3,
+    //     title: "On-line Meeting",
+    //     href: "/detail/it#sec3",
+    //   },
+    //   {
+    //     id: 4,
+    //     title: "Entertainment",
+    //     href: "/detail/it#sec4",
+    //   },
+    //   {
+    //     id: 5,
+    //     title: "AD & Donation",
+    //     href: "/detail/it#sec5",
+    //   },
+    // ],
+  },
+  {
+    id: 3,
+    title: "Cash Phone",
+    href: "/detail/phone",
+  },
+  // {
+  //   id: 3,
+  //   title: "Partners",
+  //   href: "/detail/partners",
+  // },
+  {
+    id: 4,
+    title: "Contact",
+    href: "/contact",
   },
 ];
+
+// const navItems = [
+//   {
+//     id: 0,
+//     title: "GV",
+//     href: "#",
+//     children: [
+//       {
+//         id: 1,
+//         title: "CI",
+//         href: "/ci",
+//       },
+//       {
+//         id: 1,
+//         title: "Team",
+//         href: "/team",
+//       },
+//     ],
+//   },
+//   {
+//     id: 1,
+//     title: "휴대폰 사업",
+//     href: "/detail/phone",
+//   },
+//   {
+//     id: 2,
+//     title: "마케팅 사업",
+//     href: "/detail/marketing",
+//     children: [
+//       {
+//         id: 1,
+//         title: "Marketing Service",
+//         href: "/marketing_service",
+//       },
+//       {
+//         id: 2,
+//         title: "사용방법",
+//         href: "/marketing_manual",
+//       },
+//     ],
+//   },
+//   {
+//     id: 3,
+//     title: "IT 사업",
+//     href: "/detail/it",
+//   },
+//   {
+//     id: 4,
+//     title: "제휴문의",
+//     href: "/contact",
+//   },
+// ];
 const variants = {
   open: { opacity: 1, right: "0vw", y: 0 },
   closed: { opacity: 0, right: "-100vw", y: 0 },
@@ -65,10 +216,10 @@ const Header = ({ scrollY }) => {
         {/* <img className="site-logo" src="" alt="logo" /> */}
         {/* <h1 className="site-logo">큐브린</h1> */}
         <a href="/">
-          <img className="site-logo white" src={logoWhite} alt="cubelean" />
+          <img className="site-logo white" src={LogoWhite} alt="cubelean" />
         </a>
         <a href="/">
-          <img className="site-logo black" src={logoBlack} alt="cubelean" />
+          <img className="site-logo black" src={LogoBlack} alt="cubelean" />
         </a>
         <MenuToggle toggle={() => setIsOpen(!isOpen)} open={isOpen} />
         <motion.nav
@@ -110,8 +261,17 @@ const Header = ({ scrollY }) => {
               // };
               return (
                 // <motion.li key={item.id} variants={variantsNaviItem}>
-                <li>
+                <li className="parant_menu">
                   <a href={item.href}>{item.title}</a>
+                  {item.children && (
+                    <ul className="sub_menus">
+                      {item.children.map((it) => (
+                        <li>
+                          <a href={it.href}>{it.title}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
                 // </motion.li>
               );

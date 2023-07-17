@@ -50,26 +50,27 @@ function Download() {
         <Container sx={{ position: "relative", zIndex: 2, py: 12 }}>
           <Grid container item xs={12} md={7} justifyContent="center" mx="auto" textAlign="center">
             <MKTypography variant="h3" color="white">
-              Do you love this awesome
+              GLINT VISION
             </MKTypography>
             <MKTypography variant="h3" color="white" mb={1}>
-              UI Kit for ReactJS &amp; MUI?
+              과 협력하고 싶으신가요?
             </MKTypography>
-            <MKTypography variant="body2" color="white" mb={6}>
-              Cause if you do, it can be yours for FREE. Hit the button below to navigate to
-              Creative Tim where you can find the Design System in HTML. Start a new project or give
-              an old Bootstrap project a new look!
+            <MKTypography variant="body2" color="white" mb={6} style={{ fontWeight: 500 }}>
+              제휴 문의 환영합니다! 우리와 함께 협력하여 상호 발전을 이루어봐요. 함께 협력하면 더 큰
+              가치를 창출할 수 있습니다. 언제든지 연락주세요!
             </MKTypography>
-            <MKButton
-              variant="gradient"
-              color="info"
-              size="large"
-              component="a"
-              href="https://www.creative-tim.com/product/material-kit-react"
-              sx={{ mb: 2 }}
-            >
-              Download Now
-            </MKButton>
+            <a href="tel:01085886380">
+              <MKButton
+                variant="gradient"
+                color="info"
+                size="large"
+                component="a"
+                href="tel:01085886380"
+                sx={{ mb: 2 }}
+              >
+                제휴문의
+              </MKButton>
+            </a>
           </Grid>
         </Container>
       </MKBox>
@@ -77,7 +78,7 @@ function Download() {
         <Grid container item xs={6} mx="auto">
           <MKBox textAlign="center">
             <MKTypography variant="h3" mt={6} mb={3}>
-              Available on these technologies
+              OUR PARTNERS
             </MKTypography>
             <Grid container spacing={3} justifyContent="center">
               <Grid item xs={4} lg={2}>

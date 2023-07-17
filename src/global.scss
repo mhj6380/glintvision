@@ -9,6 +9,137 @@ body {
   // background: black;
 }
 
+.inner {
+  padding: 15px;
+}
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+.scrolldown {
+  color: #fff;
+  font-size: 20px;
+  padding-top: 80px;
+  position: absolute;
+  bottom: 70px;
+}
+.scrolldown span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb05 1.5s infinite;
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+
+.slogun {
+  width: 100%;
+  z-index: 99;
+  text-align: center;
+  font-size: 55px;
+  font-weight: 700;
+  img {
+    width: 55%;
+  }
+  .slogun_ment1,
+  .slogun_ment2 {
+    color: #fff;
+    font-weight: 700;
+  }
+  .slogun_ment1 {
+    margin-bottom: 15px;
+  }
+  .slogun_ment3 {
+    font-size: 20px;
+    color: lightgrey;
+  }
+}
+.black_filter {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.contact_form {
+  width: 100%;
+  .form-group {
+    width: 100%;
+    text-align: left;
+    input {
+      width: 100%;
+      height: 40px;
+      padding-left: 10px;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  button {
+    width: 100%;
+    background: black;
+    color: #fff;
+    padding: 10px;
+  }
+}
+.team_section {
+  width: 100%;
+  .team_item_wrapper {
+    width: 100%;
+  }
+  .team_item {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+.only_pc {
+  display: none;
+}
+.only_mobile {
+}
+.sub_inner {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  img {
+    max-width: 80%;
+  }
+}
 .cubelean_3d {
   // background: red;
 
@@ -64,6 +195,7 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   z-index: 999999;
   .site-logo {
+    // height: 30px !important;
     color: #1a1a1a;
   }
   .site-logo.white {
@@ -78,13 +210,48 @@ body {
     }
     // background: #000;
   }
+
   .navs.pc {
+    ul {
+    }
     li {
       a {
         color: #1a1a1a;
       }
     }
   }
+}
+.parant_menu {
+  position: relative;
+}
+
+.sub_menus {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  width: 180px;
+  background: rgba(255, 255, 255, 0.8);
+  li {
+    width: 100%;
+    text-align: center;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: black !important;
+    }
+  }
+  li:hover {
+    background: lightblue;
+  }
+}
+.sub_menus {
+  display: none;
+}
+
+.parant_menu:hover .sub_menus {
+  display: block;
 }
 
 .contract-mini-box {
@@ -240,6 +407,10 @@ a:hover {
   width: 100%;
   height: auto;
 }
+.inner {
+  width: 100%;
+  position: relative;
+}
 .section.main-section {
   padding-top: 18vh;
   height: auto;
@@ -250,10 +421,7 @@ a:hover {
   // display: flex;
   // justify-content: center;
   // align-items: center;
-  .inner {
-    width: 100%;
-    position: relative;
-  }
+
   .main-section-background {
     width: 100%;
     height: 100%;
@@ -412,7 +580,7 @@ a:hover {
 
   .site-logo {
     font-size: 20px;
-    height: 45px;
+    height: 25px;
     // margin-left: 15px;
     position: relative;
     top: 11px;
@@ -769,8 +937,43 @@ a:hover {
   }
 }
 @media (min-width: 992px) {
+  .site-logo {
+    position: relative !important;
+    top: 25px !important;
+  }
+
+  .team_section {
+    h3 {
+      font-size: 35px;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    .team_item_wrapper {
+      width: 50%;
+    }
+    .team_item {
+      width: 50%;
+      max-width: 400px;
+    }
+  }
+
+  .only_pc {
+    display: inline-block;
+  }
+  .only_mobile {
+    display: none;
+  }
+
+  .sub_inner {
+    max-width: 992px;
+    padding-top: 100px;
+  }
   .page_title {
-    font-size: 70px !important;
+    // font-size: 70px !important;
   }
   .cubelean_3d {
     // background: red;
@@ -993,6 +1196,9 @@ a:hover {
   }
 }
 @media (min-width: 1200px) {
+  .sub_inner {
+    max-width: 1200px;
+  }
   .main_slogun_ul {
     text-align: left;
     li {
