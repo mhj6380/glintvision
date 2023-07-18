@@ -44,6 +44,7 @@ import CashphoneVideo from "assets/videos/cashphone.mp4";
 import Phone1 from "assets/phone1.png";
 import Phone2 from "assets/phone2.png";
 import MainPoster2 from "assets/main_poster2.png";
+import { useTranslation } from "react-i18next";
 // Images
 // import bgImage from "assets/images/bg-coworking.jpeg";
 const bgImage = "https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_1280.jpg";
@@ -52,11 +53,12 @@ const bgImage = "https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_12
 // import bgImage from "assets/images/bg-presentation.jpg";
 
 function Presentation() {
+  const { t } = useTranslation();
   return (
     <>
       <Layout>
         <>
-          <CommonSubHeader title="MOBILE" />
+          <CommonSubHeader title="CASH PHONE" />
           <div>
             <div className="large-video-wrapper">
               <video src={CashphoneVideo} loop autoPlay muted poster={MainPoster2}></video>
@@ -64,11 +66,7 @@ function Presentation() {
             <div className="inner">
               <div className="info1">
                 <div className="page_title">MOBILE DEVICE BUSINESS</div>
-                <p className="info_desc mb">
-                  글린트비전이 제조하는 휴대폰 'Cash Phone'은 광고비와 유통비용의 거품을 없애
-                  <br className="no_mobile" />
-                  최고의 품질 및 기능의 제품을 최저의 가격으로 제공합니다.
-                </p>
+                <p className="info_desc mb" dangerouslySetInnerHTML={{ __html: t("text196") }}></p>
                 <p className="impact_title">CASH PHONE GV-10 PRO 5G</p>
                 <br />
                 <br />

@@ -9,6 +9,9 @@ import "global.scss";
 import "glint.scss";
 import LogoWhite from "assets/logo.png";
 import LogoBlack from "assets/logo.png";
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
+
 const navItems = [
   {
     id: 0,
@@ -202,6 +205,12 @@ const Header = ({ scrollY }) => {
 
   const headerActive = isActive || scrollY > 50;
 
+  const { t } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <header
       className={"basic-header " + (headerActive && "active")}
@@ -292,7 +301,9 @@ const DropdownMenu = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
   return (
     <LanguageDropdown
       onMouseLeave={() => {
@@ -305,13 +316,19 @@ const DropdownMenu = () => {
       {isOpen && (
         <ul className="l_list">
           <li>
-            <a href="/">한국어</a>
+            <a href="#" onClick={() => changeLanguage("ko")}>
+              한국어
+            </a>
           </li>
           <li>
-            <a href="/">English</a>
+            <a href="#" onClick={() => changeLanguage("en")}>
+              English
+            </a>
           </li>
           <li>
-            <a href="/">日本語</a>
+            <a href="#" onClick={() => changeLanguage("ja")}>
+              日本語
+            </a>
           </li>
         </ul>
       )}

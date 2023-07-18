@@ -53,7 +53,7 @@ import Auditionlink from "assets/videos/auditionlink.mp4";
 import Ventures from "assets/videos/ventures.mp4";
 import Pending from "assets/pending.png";
 import Background from "assets/it_background.png";
-
+import { useTranslation } from "react-i18next";
 // Images
 // import bgImage from "assets/images/bg-coworking.jpeg";
 const bgImage = "https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_1280.jpg";
@@ -62,6 +62,7 @@ const bgImage = "https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_12
 // import bgImage from "assets/images/bg-presentation.jpg";
 
 function Presentation() {
+  const { t } = useTranslation();
   return (
     <>
       <Layout>
@@ -71,13 +72,7 @@ function Presentation() {
             <div className="inner">
               <div className="info1">
                 <div className="page_title">GLINT VISION GROUP</div>
-                <p className="info_desc mb">
-                  GLINT VISION GROUP이 만드는 다양한 플랫폼은 기초가 되는 플랫폼
-                  <br className="no_mobile" />
-                  GV Platform과 연계하여 유저들에게 서비스를 제공할 것이며 또한 각
-                  <br className="no_mobile" />
-                  플랫폼간에도 서로 유저 및 생태계를 공유 및 지원 할 것입니다.
-                </p>
+                <p className="info_desc mb" dangerouslySetInnerHTML={{ __html: t("text178") }}></p>
               </div>
 
               <Item
@@ -85,9 +80,9 @@ function Presentation() {
                 title="LINK LINE"
                 desc="Global Messenger Platform"
                 info={[
-                  { title: "인도네시아 국민 모바일 메신저" },
+                  { title: t("text179") },
                   {
-                    title: "자체 개발된 실시간 번역기능",
+                    title: t("text180"),
                     child: [
                       "Text to Text",
                       "Voice to Text",
@@ -95,8 +90,8 @@ function Presentation() {
                       "AI Voice Selecting Technology",
                     ],
                   },
-                  { title: "영상채팅, 문자채팅" },
-                  { title: "리워드 시스템" },
+                  { title: t("text181") },
+                  { title: t("text182") },
                 ]}
               />
 
@@ -105,9 +100,9 @@ function Presentation() {
                 title="LOVE LINK"
                 desc="Random Chatting Platform"
                 info={[
-                  { title: "글로벌 랜덤채팅앱" },
+                  { title: t("text183") },
                   {
-                    title: "자체 개발된 실시간 번역기능",
+                    title: t("text180"),
                     child: [
                       "Text to Text",
                       "Voice to Text",
@@ -115,8 +110,8 @@ function Presentation() {
                       "AI Voice Selecting Technology",
                     ],
                   },
-                  { title: "영상채팅, 문자채팅" },
-                  { title: "리워드 시스템" },
+                  { title: t("text181") },
+                  { title: t("text182") },
                 ]}
               />
               <Item
@@ -124,9 +119,9 @@ function Presentation() {
                 title="LIVE LINK"
                 desc="On-line Meeting Platform"
                 info={[
-                  { title: "글로벌 화상회의 및 온라인강의앱" },
+                  { title: t("text184") },
                   {
-                    title: "자체 개발된 실시간 번역기능",
+                    title: t("text180"),
                     child: [
                       "Text to Text",
                       "Voice to Text",
@@ -134,8 +129,8 @@ function Presentation() {
                       "AI Voice Selecting Technology",
                     ],
                   },
-                  { title: "영상채팅, 문자채팅" },
-                  { title: "리워드 시스템" },
+                  { title: t("text181") },
+                  { title: t("text182") },
                 ]}
               />
               <Item
@@ -144,7 +139,7 @@ function Presentation() {
                 desc="Entertainment Platform"
                 info={[
                   {
-                    title: "글로벌 오디션앱",
+                    title: t("text186"),
                     child: [
                       "Text to Text",
                       "Voice to Text",
@@ -153,9 +148,9 @@ function Presentation() {
                     ],
                   },
                   {
-                    title: "노래방기능",
+                    title: t("text185"),
                   },
-                  { title: "리워드 시스템" },
+                  { title: t("text182") },
                 ]}
               />
               <Item
@@ -164,23 +159,23 @@ function Presentation() {
                 desc="AD & Donation Platform"
                 info={[
                   {
-                    title: "글로벌 광고솔루션이 탑재된 도네이션앱",
+                    title: t("text187"),
                   },
                   {
-                    title: "리워드 시스템",
-                    child: ["기부문화 확대"],
+                    title: t("text182"),
+                    child: [t("text188")],
                   },
                   {
-                    title: "블록체인기술",
-                    child: ["투명성 문제 해결"],
+                    title: t("text189"),
+                    child: [t("text190")],
                   },
                   {
-                    title: "DAO(분권화된 자율조직)",
-                    child: ["기부자들의 투표를 통한 기부처 결정"],
+                    title: t("text191"),
+                    child: [t("text192")],
                   },
                   {
-                    title: "글로벌 광고 솔루션",
-                    child: ["국가별 타케팅", "인플루언서 마케팅"],
+                    title: t("text193"),
+                    child: [t("text194"), t("text195")],
                   },
                 ]}
               />

@@ -17,7 +17,7 @@ Coded by www.creative-tim.com
 // @mui material components
 
 // AIzaSyCRTrPDzC8WUSAwRg1wCRpNPAgoIa41nTI;
-
+import React from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -70,6 +70,7 @@ import CommonSubHeader from "components/CommonSubHeader";
 import Background from "assets/it_background.png";
 import Map from "../components/Map";
 import Map2 from "../components/Map2";
+import { useTranslation } from "react-i18next";
 // Images
 // import bgImage from "assets/images/bg-coworking.jpeg";
 const bgImage = "https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_1280.jpg";
@@ -79,6 +80,13 @@ const bgImage = "https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_12
 // import bgImage from "assets/images/bg-presentation.jpg";
 
 function Presentation() {
+  const { t } = useTranslation();
+  const [open, setOpen] = React.useState(false);
+  React.useEffect(() => {
+    setTimeout(() => {
+      setOpen(true);
+    }, 1000);
+  }, []);
   return (
     <>
       <Layout>
@@ -89,32 +97,32 @@ function Presentation() {
             <div className="inner">
               <div className="sub_inner contact_form">
                 <div className="form-group">
-                  <span style={{ fontSize: "16px" }}>업체명</span>
+                  <span style={{ fontSize: "16px" }}>{t("text197")}</span>
                   <input type="text" />
                 </div>
                 <div className="form-group">
-                  <span style={{ fontSize: "16px" }}>이름</span>
+                  <span style={{ fontSize: "16px" }}>{t("text198")}</span>
                   <input type="text" />
                 </div>
                 <div className="form-group">
-                  <span style={{ fontSize: "16px" }}>연락처</span>
+                  <span style={{ fontSize: "16px" }}>{t("text199")}</span>
                   <input type="text" />
                 </div>
                 <div className="form-group">
-                  <span style={{ fontSize: "16px" }}>이메일</span>
+                  <span style={{ fontSize: "16px" }}>{t("text200")}</span>
                   <input type="text" />
                 </div>
                 <div className="form-group">
-                  <span style={{ fontSize: "16px" }}>문의내용</span>
+                  <span style={{ fontSize: "16px" }}>{t("text201")}</span>
                   <textarea rows={5} />
                 </div>
-                <button>문의하기</button>
+                <button>{t("text202")}</button>
               </div>
 
               <div className="info1 contact_info1">
-                <div className="page_title">찾아오시는 길</div>
-                <div className="page_sub_title">㈜ 글린트비전그룹 본사</div>
-                <div className="page_content">서울특별시 강남구 봉은사로72길 13-1, GV HOUSE</div>
+                <div className="page_title">{t("text203")}</div>
+                <div className="page_sub_title">{t("text204")}</div>
+                <div className="page_content">{t("text203")}</div>
                 <div>
                   <Map
                     googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyCRTrPDzC8WUSAwRg1wCRpNPAgoIa41nTI`}
@@ -127,10 +135,8 @@ function Presentation() {
                 </div>
               </div>
               <div className="info1 contact_info1">
-                <div className="page_sub_title">㈜ 글린트비전 제조공장</div>
-                <div className="page_content">
-                  충청북도 음성군 대소면 내산길 97번길 3, GV FACTORY (27672)
-                </div>
+                <div className="page_sub_title">{t("text206")}</div>
+                <div className="page_content">{t("text207")}</div>
                 <div>
                   {/* <Map2
                     googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyCRTrPDzC8WUSAwRg1wCRpNPAgoIa41nTI`}
@@ -141,14 +147,16 @@ function Presentation() {
                     apiKey={"AIzaSyCRTrPDzC8WUSAwRg1wCRpNPAgoIa41nTI"} // Replace with your actual API key
                   /> */}
 
-                  <Map2
-                    googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyCRTrPDzC8WUSAwRg1wCRpNPAgoIa41nTI`}
-                    loadingElement={<div style={{ height: "100%" }} />}
-                    containerElement={<div style={{ height: "400px" }} />}
-                    mapElement={<div style={{ height: "100%" }} />}
-                    address={"충청북도 음성군 대소면 내산길 97번길 3"}
-                    apiKey={"AIzaSyCRTrPDzC8WUSAwRg1wCRpNPAgoIa41nTI"} // Replace with your actual API key
-                  />
+                  {open && (
+                    <Map2
+                      googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyCRTrPDzC8WUSAwRg1wCRpNPAgoIa41nTI`}
+                      loadingElement={<div style={{ height: "100%" }} />}
+                      containerElement={<div style={{ height: "400px" }} />}
+                      mapElement={<div style={{ height: "100%" }} />}
+                      address={"충청북도 음성군 대소면 내산길 97번길 3"}
+                      apiKey={"AIzaSyCRTrPDzC8WUSAwRg1wCRpNPAgoIa41nTI"} // Replace with your actual API key
+                    />
+                  )}
                 </div>
               </div>
             </div>

@@ -89,6 +89,7 @@ import Th5 from "assets/thsu5.jpeg";
 import Th6 from "assets/thsu6.jpeg";
 import ThHistory from "assets/thhistory.png";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // Images
 // import bgImage from "assets/images/bg-coworking.jpeg";
@@ -98,6 +99,7 @@ const bgImage = "https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_12
 // import bgImage from "assets/images/bg-presentation.jpg";
 
 function Presentation() {
+  const { t } = useTranslation();
   const sec2Ref = React.useRef(null);
 
   React.useEffect(() => {
@@ -117,48 +119,28 @@ function Presentation() {
                   <img className="ceo_img ceo_img1" src={Ceo1} alt="CompanyImg1" />
                   <div className="text">
                     <span className="attr">CHAIRMAN</span>
-                    <span className="name">금중필</span>
+                    <span className="name">{t("text11")}</span>
                   </div>
                 </div>
                 <div className="ceo ceo2">
                   <img className="ceo_img ceo_img2" src={Ceo2} alt="CompanyImg2" />
                   <div className="text">
                     <span className="attr">CEO</span>
-                    <span className="name">고태욱</span>
+                    <span className="name">{t("text12")}</span>
                   </div>
                 </div>
               </div>
               <div className="info">
-                <p className="ceo_title">함께 만들어가는 기업</p>
-                <p className="info_desc">
-                  4차산업 지식정보화 사회의 급속한 변화에 따라 다양화 되어가는 미디어의 진화와 이에
-                  따른 기업과 소비자
-                  <br className="no_mobile" />
-                  커뮤니케이션 활동을 선도하고 저희 글린트비전그룹은 미래를 위한 새로운 가치를
-                  발견해 나가는
-                  <br className="no_mobile" />
-                  종합 마케팅 & 커뮤니케이션 그룹을 지향하고 있습니다.
-                  <br />
-                  <br />
-                  기업 비전과 가치 철학을 통해 글린트비전그룹은 글로벌 시장을 무대로 끊임없는 글로벌
-                  경쟁력 강화를 통해 해외 시장 영역을 점차 확대해 나가고 있으며 미래 가치를 창출하는
-                  글로벌 리더로 성장해 나아갈 것입니다.
-                  <br />
-                  <br />
-                  감사합니다.
-                </p>
+                <p className="ceo_title">{t("text13")}</p>
+                <p className="info_desc" dangerouslySetInnerHTML={{ __html: t("text14") }}></p>
               </div>
             </div>
           </div>
           <div className="inner">
             <div className="info1" id="sec2" ref={sec2Ref}>
               <div className="page_title">INTRODUCTION</div>
-              <p className="info_title">"당신을 위한 맞춤형 광고 플랫폼"</p>
-              <p className="info_desc">
-                GV는 온/오프라인 광고 콘텐츠 및 IP / BRAND
-                <br />
-                사업 분야의 솔루션을 제공하는 하이테크 기반 광고 플랫폼 회사입니다.
-              </p>
+              <p className="info_title">"{t("text15")}"</p>
+              <p className="info_desc" dangerouslySetInnerHTML={{ __html: t("text16") }}></p>
               <img className="company_img1" src={CompanyImg1} alt="CompanyImg1" />
               <img className="company_img2" src={CompanyImg2} alt="CompanyImg2" />
             </div>
@@ -166,7 +148,7 @@ function Presentation() {
           <div className="info2">
             <div className="inner" id="sec3">
               <div className="page_title">VISION & GOAL</div>
-              <div className="page_sub_title">글로벌 마케팅 커뮤니케이션 컴퍼니</div>
+              <div className="page_sub_title">{t("text17")}</div>
               <img className="company_info2_img" src={CompanyInfo2} alt="CompanyImg2" />
             </div>
           </div>
@@ -175,15 +157,15 @@ function Presentation() {
               <div className="page_title mb2">CORPORATE IDENTITY</div>
               <img className="company_info3_img" src={Company3} alt="CompanyImg2" />
 
-              <p className="page_ment">
-                <b>GV</b>의 아이덴티티는 ‘빛’으로부터 기원합니다.
+              <p className="page_ment" dangerouslySetInnerHTML={{ __html: t("text18") }}>
+                {/* <b>GV</b>의 아이덴티티는 ‘빛’으로부터 기원합니다.
                 <br className="no_mobile" />
                 <b>GLINT VISION</b>의 영문 이니셜 ‘<b>G</b>’를 밝게 타오르는 불꽃의 모습으로
                 형상화하고,
                 <br className="no_mobile" />
                 무한한 활동성을 상징하는 오렌지색을 통해 업계를
                 <br className="no_mobile" />
-                선도하면 가장 밝게 빛나고자 하는 <b>GLINT VISION</b>의 기업 의지를 표현하였습니다.
+                선도하면 가장 밝게 빛나고자 하는 <b>GLINT VISION</b>의 기업 의지를 표현하였습니다. */}
               </p>
             </div>
           </div>
@@ -242,7 +224,7 @@ function Presentation() {
           </div> */}
           <div className="info5">
             <div className="inner">
-              <div className="page_title">특허</div>
+              <div className="page_title">{t("text19")}</div>
               <div className="th_list">
                 <div className="th_item">
                   <img src={Th1} alt="CompanyImg2" />
@@ -267,7 +249,7 @@ function Presentation() {
           </div>
           <div className="info5">
             <div className="inner">
-              <div className="page_title">특허현황</div>
+              <div className="page_title">{t("text20")}</div>
               <img className="th_history" src={ThHistory} alt="CompanyImg2" />
             </div>
           </div>

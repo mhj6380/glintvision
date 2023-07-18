@@ -1,3 +1,10 @@
+.company_name {
+  color: #eb4519;
+  font-weight: 1000;
+  font-size: 30px;
+  text-shadow: 1px 1px 0 #000000;
+  text-decoration: underline;
+}
 .dot_devider {
   width: 100%;
   border-bottom: 2px dotted grey;
@@ -754,6 +761,9 @@ body {
 }
 
 @media (min-width: 992px) {
+  .company_name {
+    font-size: 50px !important;
+  }
   .right_yellow {
     border-right: 6px solid #ffb800;
     padding-right: 20px;
@@ -1211,6 +1221,7 @@ body {
       width: 100%;
       display: flex;
       flex-flow: row wrap;
+      text-align: center !important;
 
       // .info {
       //   width: 50% !important;
@@ -1226,9 +1237,15 @@ body {
           font-size: 24px;
         }
       }
+
+      .info-nopadding {
+        padding-left: 0 !important;
+      }
       .info_title,
       .info_content {
         text-align: center;
+        margin: 0 auto;
+        width: 100% !important;
       }
 
       .center {

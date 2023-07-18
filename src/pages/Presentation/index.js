@@ -58,9 +58,7 @@ function Presentation() {
                   </span>
                   <span className="unit">+</span>
                 </div>
-                <div className="values_desc no_mobile">
-                  30개 이상의 글로벌 기업과 파트너쉽을 체결
-                </div>
+                <div className="values_desc no_mobile">{t("text1")}</div>
               </div>
               <div className="values values2">
                 <div className="values_label">USER</div>
@@ -72,7 +70,7 @@ function Presentation() {
                   </span>
                   <span className="unit">M+</span>
                 </div>
-                <div className="values_desc no_mobile">글로벌 유저 1,000만명 이상 확보</div>
+                <div className="values_desc no_mobile">{t("text2")}</div>
               </div>
               <div className="values values3">
                 <div className="values_label">VALUE</div>
@@ -85,7 +83,7 @@ function Presentation() {
                   </span>
                   <span className="unit">+</span>
                 </div>
-                <div className="values_desc no_mobile">세계 최초∙최고 리워드 플랫폼</div>
+                <div className="values_desc no_mobile">{t("text3")}</div>
               </div>
             </div>
 
@@ -100,9 +98,7 @@ function Presentation() {
                   <span className="unit">+</span>
                 </div>
                 <div className="values_label">PARTNER</div>
-                <div className="values_desc no_mobile">
-                  30개 이상의 글로벌 기업과 파트너쉽을 체결
-                </div>
+                <div className="values_desc no_mobile">{t("text1")}</div>
               </div>
               <div className="values values2">
                 <div className="values_value">
@@ -114,7 +110,7 @@ function Presentation() {
                   <span className="unit">M+</span>
                 </div>
                 <div className="values_label">USER</div>
-                <div className="values_desc no_mobile">글로벌 유저 1,000만명 이상 확보</div>
+                <div className="values_desc no_mobile">{t("text2")}</div>
               </div>
               <div className="values values3">
                 <div className="values_value">
@@ -127,7 +123,7 @@ function Presentation() {
                   <span className="unit">+</span>
                 </div>
                 <div className="values_label">VALUE</div>
-                <div className="values_desc no_mobile">세계 최초∙최고 리워드 플랫폼</div>
+                <div className="values_desc no_mobile">{t("text3")}</div>
               </div>
             </div>
           </div>
@@ -142,12 +138,7 @@ function Presentation() {
               </div>
               <div className="info right_yellow">
                 <div className="title">GLOBAL PLATFORM BUSINESS</div>
-                <div className="desc ">
-                  글린트비전그룹은 혁신적인 IT 기술과 광고마케팅의 대한 노하우를 통해 창조적인
-                  가치를 제공하고 있습니다. 우리의 플랫폼은 유저와 함께 만들어 나가는 플랫폼으로
-                  생태계를 형성하고, 플랫폼간의 네트워크를 활성화 하여 유저 및 생태계를 공유 및
-                  지원하여 보다 큰 혜택을 제공할 것입니다.
-                </div>
+                <div className="desc ">{t("text4")}</div>
                 <a className="more_btn" href="/detail/platform">
                   More <Icon>arrow_forward</Icon>
                 </a>
@@ -162,13 +153,7 @@ function Presentation() {
               </div>
               <div className="info left_yellow">
                 <div className="title">MOBILE DEVICE BUSINESS</div>
-                <div className="desc">
-                  글린트비전이 제조하는 휴대폰 'Cash Phone'은 광고비와 유통비용의 거품을 없애 최고의
-                  품질 및 기능의 제품을 최저의 가격으로 제공합니다. 자체 개발된 GV Platform, Love
-                  Link, Ventures Network 등의 플랫폼 뿐만 아니라 각종 K-Contents가 탑재하여
-                  소프트웨어와 하드웨어를 융합한 특화된 서비스를 제공합니다. 현재 동남아시아와
-                  아프리카 지역의 여러 나라들과 OEM Business를 진행하고 있습니다.
-                </div>
+                <div className="desc">{t("text5")}</div>
                 <a className="more_btn" href="/detail/phone">
                   More <Icon>arrow_forward</Icon>
                 </a>
@@ -183,12 +168,7 @@ function Presentation() {
               </div>
               <div className="info right_yellow">
                 <div className="title">MARKETING COMMUNICATION</div>
-                <div className="desc">
-                  온오프라인 통합 마케팅을 통해 고객들에게 더 나은 경험을 제공합니다. 디지털 전략과
-                  현장의 힘을 결합하여 체계적인 마케팅을 실현하며, 효과적인 커뮤니케이션과 최적의
-                  결과를 도출합니다. 우리와 함께하면 현대적인 마케팅 트렌드에 따라 변화하는 시장에서
-                  높은 성과를 이끌어낼 수 있습니다.
-                </div>
+                <div className="desc">{t("text6")}</div>
                 <a className="more_btn" href="/detail/marketing">
                   More <Icon>arrow_forward</Icon>
                 </a>
@@ -200,14 +180,14 @@ function Presentation() {
               className="contact_banner"
               style={{ background: `url(${ContactBannerImg})`, backgroundSize: "100% 100%" }}
             >
-              <div className="title">GLINT VISION과 협력하고 싶으신가요?</div>
+              <div className="title">{t("text7")}</div>
               <div className="desc">
-                제휴 문의 환영합니다! 우리와 함께 협력하여 상호 발전을 이루어봐요.
+                {t("text8")}
                 <br className="no_mobile" />
-                함께 협력하면 더 큰 가치를 창출할 수 있습니다. 언제든지 연락주세요!
+                {t("text9")}
               </div>
               <a href="/contact" className="more_btn">
-                제휴문의
+                {t("text10")}
               </a>
             </div>
           </div>
